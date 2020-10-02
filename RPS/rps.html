@@ -4,19 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./rps.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <div class="results">
-      <div id="playerScore">You: 0</div>
-      <div id="cpuScore">CPU: 0</div>
-      <div id="resultText">Click on one of the buttons to start the game</div>
+    <div class="start">
+      <label for="rounds">How many Rounds do you want to play?</label>
+      <input id="rounds" type="number" name="roundSelect" placeholder="3">
+      <p>Confirm by choosing the CPU's difficulty</p>
+      <button value="easy" class="btn dif">Unlucky</button>
+      <button value="medium" class="btn dif">Average</button>
+      <button value="hard" class="btn dif">Lucky</button>
+      <button value="impossible" class="btn dif">Precog</button>
+      <div class="warning hide">Choose a number between 1-100!</div>
     </div>
-    <button value="rock" class="btn">Rock</button>
-    <button value="paper" class="btn">Paper</button>
-    <button value="scissors" class="btn">Scissors</button>
-    <div><input id="rounds" type="number" name="roundSelect" placeholder="3"></div>
+    <div class="game hide invisible">
+      <div class="results">
+        <div id="playerScore">You: 0</div>
+        <div id="cpuScore">CPU: 0</div>
+        <div id="resultText">Click on one of the buttons to start the game</div>
+      </div>
+      <button value="rock" class="btn rps">Rock</button>
+      <button value="paper" class="btn rps">Paper</button>
+      <button value="scissors" class="btn rps">Scissors</button>
+    </div>
+    <div class="final hide invisible"></div>
   </body>
   <script src="./rps.js"></script>
 </html>
